@@ -2,7 +2,7 @@
 
 ### Install package
 ```bash
-sudo apt-get update && sudo apt-get install -y gnupg2
+sudo apt-get update && sudo apt-get install -y gnupg2 ccze locate
 sudo echo -e "\ndeb https://www.mindforger.com/debian stretch main" >> /etc/apt/sources.list.d/hstr.list
 wget -qO - https://www.mindforger.com/gpgpubkey.txt | sudo apt-key add -
 sudo apt-get update && sudo apt-get install -y hstr
@@ -24,6 +24,6 @@ if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
 if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
 
 logtail () {
-  tail
+  tail -F $1 | ccze -A -o nolookups
 }
 ```
