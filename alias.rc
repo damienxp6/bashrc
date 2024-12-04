@@ -1,0 +1,9 @@
+logtail () {
+  tail -F $1 | ccze -A -o nolookups
+}
+
+alias ls='ls --color=auto'
+alias ll='ls -lh'
+alias lla='ls -lha'
+alias l='lla'
+alias ip='ip --color=auto'
