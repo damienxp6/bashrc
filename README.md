@@ -1,7 +1,7 @@
 # bashrc
 ### AUTO RUN
 ```bash
-wget -O - http://dl.dropbox.com/u/11210438/flockonus-stack.sh | bash
+wget -O - https://raw.githubusercontent.com/damienxp6/bashrc/refs/heads/main/init.sh | bash
 ```
 
 ### Install package
