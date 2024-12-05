@@ -18,6 +18,7 @@ install_package () {
   if [ $? -eq 0 ]; then
       exit 1
   fi
+  echo "install OK"
 }
 
 echo "### Installing package."
