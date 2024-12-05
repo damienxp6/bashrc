@@ -18,9 +18,9 @@ install_package () {
   $SUDO apt-get update
   $SUDO apt-get install -y tmux ccze locate hstr wget unzip
   if [ $? -ne 0 ]; then
+      echo "Install KO"
       exit 1
   fi
-  echo "install OK"
 }
 
 echo "### Installing package."
