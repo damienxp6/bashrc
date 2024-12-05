@@ -1,8 +1,8 @@
 get_wget () {
   wget -qO ~/.tmux.conf https://raw.githubusercontent.com/damienxp6/tmux/master/tmux.conf
   mkdir -p -v ~/.tmux/plugins
-  wget -O tpm.zip https://github.com/tmux-plugins/tpm/archive/master.zip && unzip tpm.zip -d ~/.tmux/plugins/
-  wget -O tmux-prefix-highlight.zip https://github.com/tmux-plugins/tmux-prefix-highlight/archive/master.zip && unzip tmux-prefix-highlight.zip -d ~/.tmux/plugins/
+  wget -O tpm.zip https://github.com/tmux-plugins/tpm/archive/master.zip && unzip -o tpm.zip -d ~/.tmux/plugins/
+  wget -O tmux-prefix-highlight.zip https://github.com/tmux-plugins/tmux-prefix-highlight/archive/master.zip && unzip -o tmux-prefix-highlight.zip -d ~/.tmux/plugins/
   rm -f tpm.zip tmux-prefix-highlight.zip
 }
 
