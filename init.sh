@@ -1,12 +1,16 @@
 get_wget () {
+  echo "# download .tmux.conf"
   wget -qO ~/.tmux.conf https://raw.githubusercontent.com/damienxp6/tmux/master/tmux.conf
   mkdir -p -v ~/.tmux/plugins
-  wget -O tpm.zip https://github.com/tmux-plugins/tpm/archive/master.zip && unzip -o tpm.zip -d ~/.tmux/plugins/
-  wget -O tmux-prefix-highlight.zip https://github.com/tmux-plugins/tmux-prefix-highlight/archive/master.zip && unzip -o tmux-prefix-highlight.zip -d ~/.tmux/plugins/
+  echo "# download tmux plugin manager"
+  wget -qO tpm.zip https://github.com/tmux-plugins/tpm/archive/master.zip && unzip -qo tpm.zip -d ~/.tmux/plugins/
+  echo "# download plugin : tmux-prefix-highlight"
+  wget -qO tmux-prefix-highlight.zip https://github.com/tmux-plugins/tmux-prefix-highlight/archive/master.zip && unzip -qo tmux-prefix-highlight.zip -d ~/.tmux/plugins/
   rm -f tpm.zip tmux-prefix-highlight.zip
 }
 
 get_bashrc () {
+  echo "# download .bashrc"
   wget -qO ~/.bashrc https://raw.githubusercontent.com/damienxp6/bashrc/refs/heads/main/.bashrc
 }
 
@@ -25,7 +29,7 @@ install_package () {
 
 echo "### Installing package."
 install_package
-echo "### Get bashrc."
+echo -e "\n### Get bashrc."
 get_bashrc
-echo "### Get tmux config."
+echo -e "\n### Get tmux config."
 get_wget
